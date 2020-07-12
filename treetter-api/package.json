@@ -1,0 +1,73 @@
+{
+  "name": "treetter-backend",
+  "version": "1.0.0",
+  "description": "Sistema de backend para proyecto terminal de la Licenciatura en Tecnologías y Sistemas de Información (LTSI) impartida por la Universidad Autónoma Metropolitana unidad Cuajimalpa (UAM-C), extrae un dataset de un usuario de Twitter y graficamos la información en un Treemap.",
+  "main": "src/api/app",
+  "scripts": {
+    "production": "npx cross-env NODE_ENV=production",
+    "development": "npx cross-env NODE_ENV=development",
+    "testing": "npx cross-env NODE_ENV=testing",
+    "test": "npm run testing npx mocha",
+    "coverage": "npx nyc npm test",
+    "dev": "npx nodemon",
+    "build": "npx tsc",
+    "run-build": "node ./dist/api/app",
+    "clean-build": "npx rimraf dist/",
+    "clean-logs": "npx rimraf logs/",
+    "clean-coverage": "npx rimraf .nyc_output/ && npx rimraf coverage/",
+    "clean": "npm run clean-build && npm run clean-logs && npm run clean-coverage",
+    "start": "npm run build && npm run run-build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VicenteJSP/treetter-backend.git"
+  },
+  "keywords": [
+    "UAM",
+    "LTSI",
+    "Twitter",
+    "Treemap",
+    "dataviz"
+  ],
+  "author": "Vicente Santiago",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/VicenteJSP/treetter-backend/issues"
+  },
+  "homepage": "https://github.com/VicenteJSP/treetter-backend#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dayjs": "^1.8.26",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.10",
+    "mongoose-unique-validator": "^2.0.3",
+    "morgan": "^1.10.0",
+    "twitter-node-client": "0.0.6",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.2",
+    "@types/chai": "^4.2.11",
+    "@types/cors": "^2.8.6",
+    "@types/dotenv": "^8.2.0",
+    "@types/express": "^4.17.6",
+    "@types/jsonwebtoken": "^8.3.9",
+    "@types/mocha": "^7.0.2",
+    "@types/mongoose": "^5.7.12",
+    "@types/morgan": "^1.9.0",
+    "@types/node": "^13.13.2",
+    "@types/supertest": "^2.0.8",
+    "chai": "^4.2.0",
+    "cross-env": "^7.0.2",
+    "dotenv": "^8.2.0",
+    "mocha": "^7.1.1",
+    "nodemon": "^2.0.3",
+    "nyc": "^15.0.1",
+    "rimraf": "^3.0.2",
+    "supertest": "^4.0.2",
+    "ts-node": "^8.9.0",
+    "typescript": "^3.8.3"
+  }
+}

@@ -1,0 +1,10 @@
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Cómo funciona
+      <span *ngFor="let letra of title"
+        class="{{letra.clase}} name-backspace font-weight-bolder">{{ letra.chart | titlecase }}</span>?
+    </h1>
+    <img class="img-fluid" src="../assets/infographic/infografia_001.png" alt="Infografia">
+    <p class="lead">Inicia sesion para comenzar!!!</p>
+  </div>
+</div>

@@ -1,0 +1,59 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+# APP
+# compiled output
+treetter-app/dist
+treetter-app/tmp
+treetter-app/out-tsc
+# Only exists if Bazel was run
+treetter-app/bazel-out
+
+# dependencies
+treetter-app/node_modules
+
+# profiling files
+treetter-app/chrome-profiler-events*.json
+treetter-app/speed-measure-plugin*.json
+
+# IDEs and editors
+treetter-app/.idea
+treetter-app/.project
+treetter-app/.classpath
+treetter-app/.c9/
+treetter-app/*.launch
+treetter-app/.settings/
+treetter-app/*.sublime-workspace
+
+# IDE - VSCode
+treetter-app/.vscode/*
+treetter-app/!.vscode/settings.json
+treetter-app/!.vscode/tasks.json
+treetter-app/!.vscode/launch.json
+treetter-app/!.vscode/extensions.json
+treetter-app/.history/*
+
+# misc
+treetter-app/.sass-cache
+treetter-app/connect.lock
+treetter-app/coverage
+treetter-app/libpeerconnection.log
+treetter-app/npm-debug.log
+treetter-app/yarn-error.log
+treetter-app/testem.log
+treetter-app/typings
+
+# System Files
+treetter-app/.DS_Store
+treetter-app/Thumbs.db
+
+# API
+# Modulos de Node
+treetter-api/node_modules/**
+
+# Carpetas de salida
+treetter-api/logs/**
+treetter-api/dist/**
+
+# Erramientas de desarrollo
+treetter-api/.nyc_output/**
+treetter-api/coverage/**
+treetter-api/.env

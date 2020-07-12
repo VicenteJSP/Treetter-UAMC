@@ -1,0 +1,23 @@
+<div class="container flex-column h-full">
+
+  <div class="d-flex flex-row mt-5 align-items-start justify-content-center" *ngIf="showSpinner">
+    <div class="spinner-grow " style="width: 6rem; height: 6rem;" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+
+  <!-- Barra de busqueda -->
+  <app-search (spinner)="spinner($event)" class="d-flex flex-row mt-2 align-items-start"></app-search>
+
+  <!-- Tabla informativa -->
+  <app-info *ngIf="showMe"></app-info>
+
+  <!-- Listado de Treemaps -->
+  <app-list-treemaps class="d-flex row text-center justify-content-center mb-5"></app-list-treemaps>
+
+  <!-- Infografia -->
+  <app-infographic *ngIf="!showMe" class="d-flex row align-items-center pb-5 mb-5"></app-infographic>
+
+  <!-- Footer -->
+  <app-footer class="d-flex flex-row bg-dark text-light align-items-start pt-2 footer"></app-footer>
+</div>

@@ -1,0 +1,81 @@
+/* You can add global styles to this file, and also import other style files */
+.name-t {
+  color: rgba(36, 140, 163, 0.6);
+}
+
+.name-e {
+  color: rgba(245, 163, 0, 0.6);
+}
+
+.name-r {
+  color: rgba(226, 22, 245, 0.6);
+}
+
+.signo {
+  color: rgba(8, 34, 54, 0.6);
+}
+
+.name-b {
+  color: rgba(245, 163, 0, 0.6);
+}
+
+.name-backspace {
+  padding-right: 0.1em;
+}
+
+.logo-img {
+  margin-right: .2em;
+  padding-bottom: .2em;
+  width: 3.5rem;
+}
+
+.logo {
+  font-size: 4.5em;
+}
+
+.h-full {
+  height: 100vh;
+}
+
+.bg-transparent{
+  background-color: rgba(36, 140, 163, 0);
+}
+
+.footer img {
+  background-color: gray;
+  border-radius: 50%;
+  border: 0.05em solid #212529;
+  height: 2.5em;
+  margin: 0.2em;
+  padding: 0.2em;
+  width: 2.5em;
+}
+
+.user-menu{
+  width: 2.5rem;
+}
+
+.pic-profile {
+  height: 3.7em;
+  width: 3.7em;
+}
+
+.check-profile {
+  height: 1em;
+  width: 1em;
+}
+
+.rt-m { background-color: #D9B68B; }
+.rt-h { background-color: #BF9169; }
+.rt-mh { background-color: #8C634A; }
+.rt-t { background-color: #F2DAC4; }
+
+.tr-m { background-color: #049DD9; }
+.tr-h { background-color: #05C7F2; }
+.tr-mh { background-color: #224459; }
+.tr-t { background-color: #B3ECF2; }
+
+.to-m { background-color: #6CBF45; }
+.to-h { background-color: #5DA649; }
+.to-mh { background-color: #2F5928; }
+.to-t { background-color: #C9F2B6; }

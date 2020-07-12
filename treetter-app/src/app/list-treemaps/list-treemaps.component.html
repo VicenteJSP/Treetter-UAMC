@@ -1,0 +1,15 @@
+<div *ngFor="let element of treemap$ | async, let i = index"
+  class="card p-2 mt-0 mb-2 col-sm-6 col-md-4 col-lg-4 col-xl-3">
+  <button type="button" class="close" (click)="delete(i)">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  <app-d3-treemap [treemapData]="element.treemap"></app-d3-treemap>
+  <div class="card-body">
+    <img [src]="element.treemap.picProfile" class="rounded-circle pic-profile">
+    <h5 class="card-title" data-toggle="treemap" [title]="element.user">
+      {{element.user}}
+      <img *ngIf="element.treemap.verified" src="./assets/icon/verified.png" class="rounded-circle check-profile">
+    </h5>
+    <p class="card-text" data-toggle="treemap" [title]="element.sample">{{element.sample}}</p>
+  </div>
+</div>

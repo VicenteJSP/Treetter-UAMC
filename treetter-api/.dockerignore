@@ -1,0 +1,11 @@
+# Modulos de Node
+node_modules/**
+
+# Carpetas de salida
+logs/**
+dist/**
+
+# Erramientas de desarrollo
+.nyc_output/**
+coverage/**
+.env

@@ -1,0 +1,61 @@
+<nav class="navbar row navbar-dark bg-dark text-light">
+  <span class="navbar-brand mb-0 h1">Treetter</span>
+  <form [formGroup]="formLogin" (submit)="login($event)" class="form-inline my-2 my-lg-0" *ngIf="!authUser">
+    <input class="form-control mr-sm-2" [class.border-danger]="emailLoginInvalid" [class.border-error]="emailLoginInvalid" type="email"
+      placeholder="Email@domain.com" formControlName="email">
+    <input class="form-control mr-sm-2" [class.border-danger]="pwdLoginInvalid" [class.border-error]="pwdLoginInvalid" type="password" placeholder="Password"
+      formControlName="password">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">&nbsp;Login&nbsp;</button>
+    <button type="button" class="btn btn-outline-primary ml-2" data-toggle="modal"
+      data-target="#registro">Regitrarse</button>
+  </form>
+  <form [formGroup]="user" (submit)="logout($event)" class="form-inline my-2 my-lg-0" *ngIf="authUser">
+    <span class="navbar-brand mb-0 h1">{{ user.value.username }}</span>
+    <img src="../../assets/avatar/batman.png" class="user-menu rounded-circle border border-success" alt="user">
+    <button class="btn btn-outline-danger ml-3 my-2 my-sm-0" type="submit">Logout</button>
+  </form>
+</nav>
+
+<div class="modal fade" id="registro" tabindex="-1" role="dialog" aria-labelledby="registroTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="registroTitle">Registro de usuario</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form [formGroup]="formRegister" (submit)="register($event)">
+        <div class="modal-body">
+
+          <div class="form-group">
+            <label for="username">Nombre de usuario</label>
+            <input type="text" class="form-control" id="username" formControlName="username" autocomplete="off">
+            <div class="alert alert-danger" role="alert" *ngIf="usernameRgisterInvalid">
+              Es nesesario un nombre de usuario!
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" formControlName="email" autocomplete="off">
+            <div class="alert alert-danger" role="alert" *ngIf="emailRegisterInvalid">
+              No has ingresado un email valido!
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" formControlName="password" autocomplete="off">
+            <div class="alert alert-danger" role="alert" *ngIf="pwdRegisterInvalid">
+              Se te ha olvidado ingresar la contraseña!
+            </div>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-secondary" data-dismiss="modal" #closeModal >Cancelar</button>
+          <button type="submit" class="btn btn-outline-primary">Registrar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

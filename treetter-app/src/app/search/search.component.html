@@ -1,0 +1,23 @@
+<div class="d-flex flex-column text-center col justify-content-center" [class.mt-5]="!isAuth">
+  <div class="d-flex flex-row justify-content-center align-items-start">
+    <div class="align-items-center logo">
+      <img [src]="logoPrincipal" class="logo-img" alt="Logo Treeter">
+      <span *ngFor="let letra of title" class="{{letra.clase}} name-backspace">{{ letra.chart | titlecase }}</span>
+      <hr>
+    </div>
+  </div>
+  <div class="d-flex flex-row justify-content-center align-items-end pt-3" [class.custom-file-input]="!isAuth">
+    <form [formGroup]="searchUser" (submit)="search($event)">
+      <div class="input-group mb-3">
+        <label class="input-group-prepend" for="username">
+          <span class="input-group-text border border-info bg-transparent text-info">@</span>
+        </label>
+        <input formControlName="user" type="text" class="form-control border border-info" placeholder="Username"
+          id="username" autocomplete="off" [disabled]="searching">
+        <label class="input-group-append">
+          <button class="btn btn-outline-info" [disabled]="searchUser.invalid || searching" type="submit">Buscar</button>
+        </label>
+      </div>
+    </form>
+  </div>
+</div>

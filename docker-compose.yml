@@ -1,0 +1,16 @@
+version: '3'
+services:
+    api:
+        build: ./treetter-api/.
+        environment: 
+            - CONSUMER_KEY_TWITTER=xxxxxxxxxxxxxxxxxxxxxxxxx
+            - CONSUMER_SECRET_TWITTER=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+            - ACCESS_TOKEN_TWITTER=xxxxxxxxxxxxxxxxxxx-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+            - ACCESS_TOKEN_SECRET_TWITTER=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+            - CALLBACK_URL=https://xxxxx.com     
+        ports: 
+            - "3001:3001"
+    nginx:
+        build: ./treetter-app/.
+        ports:
+          - "8080:80"
